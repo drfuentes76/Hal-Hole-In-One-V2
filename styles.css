@@ -1,1 +1,12 @@
-/* CSS for responsive mobile layout and accessibility */
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 2rem;
+  background-color: #e9f5ff;
+}
+button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
