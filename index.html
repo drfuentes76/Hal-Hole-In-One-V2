@@ -2,16 +2,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HAL's Hole in One Golf v2.0</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>HAL's Hole in One Golf</h1>
-  <p>Welcome to the accessible web version of HAL's Hole in One Golf!</p>
-  <button onclick="startGame()">Start Game</button>
-  <div id="gameArea" aria-live="polite"></div>
+  <h1>HAL's Hole in One Golf - Multiplayer Tournament Edition</h1>
+  <div id="lobby">
+    <input type="text" id="username" placeholder="Enter your name" />
+    <button onclick="createLobby()">Create Game</button>
+    <button onclick="joinLobby()">Join Game</button>
+  </div>
+  <div id="gameArea" hidden>
+    <p id="status">Waiting for players...</p>
+    <div id="scoreboard"></div>
+    <div id="chatArea">
+      <div id="chatLog"></div>
+      <input type="text" id="chatInput" placeholder="Type a message" />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
   <script src="game.js"></script>
 </body>
 </html>
